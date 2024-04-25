@@ -21,6 +21,7 @@ parser = argparse.ArgumentParser(description='train parameters')
 parser.add_argument('--model', type=str, default='nextgpt')
 parser.add_argument('--nextgpt_ckpt_path', type=str)  # the delta parameters trained in each stages
 parser.add_argument('--stage', type=int, default=3)
+parser.add_argument('--mode', type=str, default='validation', choices=['validation'])
 args = parser.parse_args()
 args = vars(args)
 args.update(load_config(args))
