@@ -1,3 +1,5 @@
 __pycache__/
 .idea
 imagebind_huge.pth
+ckpt/delta_ckpt/nextgpt/7b_tiva_v0/**
+ckpt/pretrained_ckpt/vicuna_ckpt/7b_v0/**
