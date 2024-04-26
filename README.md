@@ -196,7 +196,11 @@ conda env create -n nextgpt python=3.8
 conda activate nextgpt
 
 # CUDA 11.6
+# old-command
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia
+
+# new-command
+mamba install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 "mkl<2024" -c pytorch -c nvidia
 
 git clone https://github.com/NExT-GPT/NExT-GPT.git
 cd NExT-GPT
