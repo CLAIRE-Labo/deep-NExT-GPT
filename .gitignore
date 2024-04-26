@@ -3,3 +3,7 @@ __pycache__/
 imagebind_huge.pth
 ckpt/delta_ckpt/nextgpt/7b_tiva_v0/**
 ckpt/pretrained_ckpt/vicuna_ckpt/7b_v0/**
+
+# training data
+data/T-X_pair_data/audiocap/dataset/
+data/T-X_pair_data/cc3m/Train_GCC-training.tsv
