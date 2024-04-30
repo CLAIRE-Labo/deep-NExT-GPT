@@ -7,3 +7,12 @@ ckpt/pretrained_ckpt/vicuna_ckpt/7b_v0/**
 # training data
 data/T-X_pair_data/audiocap/dataset/
 data/T-X_pair_data/cc3m/Train_GCC-training.tsv
+
+# model weights
+Llama-2-7b-chat-hf/
+ckpt/pretrained_ckpt/imagebind_ckpt/huge-old/
+ckpt/pretrained_ckpt/vicuna_ckpt/7b_v0-new/
+ckpt/pretrained_ckpt/vicuna_ckpt/7b_v0-old/
+vicuna-7b-delta-v0/
+vicuna/
+

@@ -65,7 +65,8 @@ class NextGPTModel(nn.Module):
                                              self.args['vicuna_version'])
         print(f'Initializing language decoder from {self.vicuna_ckpt_path} ...')
 
-        self.llama_model = LlamaForCausalLM.from_pretrained(self.vicuna_ckpt_path)
+        # self.llama_model = LlamaForCausalLM.from_pretrained(self.vicuna_ckpt_path)
+        self.llama_model = LlamaForCausalLM.from_pretrained('/claire-rcp-scratch/home/mekjavic/next-gpt/deep-NExT-GPT/ckpt/pretrained_ckpt/vicuna_ckpt/7b_v0')
         if self.args.get('freeze_lm'):
             print("Freezing the LLaMa ...")
             for param in self.llama_model.parameters():
@@ -88,7 +89,10 @@ class NextGPTModel(nn.Module):
         print('Language decoder initialized.')
 
         # use the new trained tokenizer
-        tokenizer_path = self.vicuna_ckpt_path
+        # tokenizer_path = self.vicuna_ckpt_path
+        # print('--------------')
+        # print(tokenizer_path)
+        tokenizer_path = '/claire-rcp-scratch/home/mekjavic/next-gpt/deep-NExT-GPT/ckpt/pretrained_ckpt/vicuna_ckpt/7b_v0'
         print(f'Initializing tokenizer from {tokenizer_path} ...')
         self.llama_tokenizer = LlamaTokenizer.from_pretrained(tokenizer_path, use_fast=False)
         self.llama_tokenizer.pad_token = self.llama_tokenizer.eos_token

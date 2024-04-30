@@ -110,6 +110,10 @@ if __name__ == '__main__':
     model = NextGPTModel(**args)
     delta_ckpt = torch.load(os.path.join(args['nextgpt_ckpt_path'], 'pytorch_model.pt'), map_location=torch.device('cuda'))
     # print(delta_ckpt)
+    # -- need to make manual absolute path to the /7b_tiva_v0/pytorch_model.pt
+
+
+
     model.load_state_dict(delta_ckpt, strict=False)
     model = model.eval().half().cuda()
     # model = model.eval().cuda()
