@@ -108,9 +108,13 @@ if __name__ == '__main__':
     args.update(load_config(args))
 
     model = NextGPTModel(**args)
-    delta_ckpt = torch.load(os.path.join(args['nextgpt_ckpt_path'], 'pytorch_model.pt'), map_location=torch.device('cuda'))
-    # print(delta_ckpt)
+
     # -- need to make manual absolute path to the /7b_tiva_v0/pytorch_model.pt
+    delta_ckpt_abs_path = '/claire-rcp-scratch/home/mekjavic/next-gpt/deep-NExT-GPT/ckpt/delta_ckpt/nextgpt/7b_tiva_v0/pytorch_model.pt'
+    # delta_ckpt = torch.load(os.path.join(args['nextgpt_ckpt_path'], 'pytorch_model.pt'), map_location=torch.device('cuda'))
+    delta_ckpt = torch.load(delta_ckpt_abs_path,
+                            map_location=torch.device('cuda'))
+    # print(delta_ckpt)
 
 
 
