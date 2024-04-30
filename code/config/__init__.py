@@ -26,7 +26,7 @@ def load_config(args):
 
     # load stage config
     # if args.get('mode'):
-    stage_configuration = load_model_config(args['stage'], args['mode'])
+    stage_configuration = load_model_config(args['stage'], args['model'])
 
     # update and append the stage config for base config
     base_configuration.update(stage_configuration)

@@ -107,6 +107,8 @@ if __name__ == '__main__':
             }
     args.update(load_config(args))
 
+    args['freeze_output_proj'] = True
+    args['freeze_lm'] = True
     model = NextGPTModel(**args)
 
     # -- need to make manual absolute path to the /7b_tiva_v0/pytorch_model.pt
@@ -129,7 +131,7 @@ if __name__ == '__main__':
     temperature = 0.4
     modality_cache = None
 
-    prompt = 'show me a video. a woman walk a dop in the park.'
+    prompt = 'generate a picture of dalmatia'
 
     history = []
 
